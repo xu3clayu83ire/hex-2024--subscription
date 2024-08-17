@@ -1,4 +1,27 @@
-# hex-2024-subscription
+# init
+
+```
+npm init -y
+npm create vite@latest
+npm install
+npm run dev
+
+//dependencies
+npm i bootstrap
+npm i vue-router
+npm i bootstrap-icons
+~~npm i --save bootstrap @popperjs/core~~
+
+//devDependencies
+npm i sass --save-dev
 
 
-[首頁](https://xu3clayu83ire.github.io/hex-2024-subscription)
+// third-paety
+npm install --save aos@next
+
+```
+
+## 項目
+
+- Guidline done
+- image done

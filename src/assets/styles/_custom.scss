@@ -1,0 +1,69 @@
+/** button */
+.btn-primary {
+    color: #fff !important; 
+    background-color: $sb-accent-200 !important;
+    border: none !important;
+    border-radius: 100px;
+    font-weight: 700;
+    line-height: 1.2;//19.2px
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+    color: #fff !important;
+    background-color: $sb-accent-300 !important;
+    border: none !important;
+}
+
+.btn-primary.disabled{
+    background-color: $sb-gray-200 !important;
+    border: none !important;
+}
+
+.btn-secondary {
+    color: $sb-gray-400 !important;
+    background-color: $sb-gray-100 !important;
+    border: none !important;
+    border-radius: 100px;
+    font-weight: 700;
+    line-height: 1.2;//19.2px
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active {
+    color: $sb-gray-500 !important;
+    background-color: $sb-gray-200 !important;
+    border-color: none !important;
+}
+
+.btn-secondary.disabled{
+    color: $sb-gray-300 !important;
+    background-color: $sb-gray-100 !important;
+    border-color: $sb-gray-100 !important;
+}
+
+.btn-primary.btn-lg,.btn-secondary.btn-lg {
+    font-weight: 900;
+}
+/**-=============-*/
+
+/** badge */
+.badge-sb{
+    font-size: 1rem;
+    border-radius: .25rem;
+    font-weight: 700;
+    line-height: 1.2;//19.2px
+}
+
+.badge-sb-primary-300{
+    color: $sb-primary-400 !important;
+    background-color: $sb-primary-300 !important;
+    padding: 4px 8px !important;
+
+}
+
+.badge-sb-accent-300{
+    color: $sb-accent-300 !important;
+    background-color: $white !important;
+    padding: 8px 12px !important;
+    border: $sb-accent-100 1px solid;
+}
+/**-=============-*/
