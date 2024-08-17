@@ -16,7 +16,7 @@ npm i bootstrap-icons
 npm i sass --save-dev
 
 
-// third-paety
+// third-party
 npm install --save aos@next
 
 ```
