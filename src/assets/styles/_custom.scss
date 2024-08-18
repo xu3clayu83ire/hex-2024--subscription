@@ -67,3 +67,14 @@
     border: $sb-accent-100 1px solid;
 }
 /**-=============-*/
+
+
+/** form */
+.form-control:focus{
+    border-color: $sb-accent-200;
+    box-shadow: 0 0 0 0.25rem $sb-accent-100;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
