@@ -37,7 +37,8 @@
                     </li>
                     <li class="mt-9 mt-lg-0">
                         <div>
-                            <a class="btn-logon btn btn-primary w-100" type="button">登入 / 註冊</a>
+                            <btnPrimary :text="btnText" class="fw-bold fs-6" />
+                            <!-- <a class="btn-logon btn btn-primary w-100" type="button">登入 / 註冊</a> -->
                         </div>
                     </li>
                 </ul>
@@ -50,6 +51,9 @@
 import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import { Collapse } from 'bootstrap';
+import btnPrimary from '../components/common/buttons/btnPrimary.vue';
+
+const btnText = ref('登入 / 註冊')
 
 onMounted(() => {
 
