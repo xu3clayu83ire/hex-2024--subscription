@@ -1,5 +1,5 @@
 <template>
-    <button type="button" class="btn sb-btn btn-primary">
+    <button type="button" class="btn sb-btn sb-btn-primary">
         {{ text }}
         <i v-if="isShowArrow" class="bi bi-arrow-right ms-3"></i>
     </button>
@@ -14,46 +14,54 @@ const isShowArrow = props.isShowArrow;
 </script>
 
 <style scoped>
-.sb-btn {
+.btn.sb-btn {
     padding: 12px 20px;
 }
 
-.btn-primary {
-    color: #fff !important;
-    background-color: #569573 !important;
-    border: none !important;
+.btn.sb-btn-primary {
+    color: #fff;
+    background-color: #569573;
+    border: none;
     border-radius: 100px;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.2;
+    display: flex;
+    align-items: center;
 }
 
-.btn-primary>i {
+.btn.sb-btn-primary>i {
     font-size: 20px;
+    line-height: 1;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active {
-    color: #fff !important;
-    background-color: #406c55 !important;
-    border: none !important;
+.btn.sb-btn-primary:hover,
+.btn.sb-btn-primary:focus,
+.btn.sb-btn-primary:active,
+.btn.sb-btn-primary.active {
+    color: #fff;
+    background-color: #406c55;
+    border: none;
 }
 
-.btn-primary.disabled {
-    background-color: #e9ecef !important;
-    border: none !important;
+.btn.sb-btn-primary.disabled {
+    background-color: #e9ecef;
+    border: none;
 }
 
 
 @media (min-width: 992px) {
-    .sb-btn {
+    .btn.sb-btn {
         padding: 16px 24px;
     }
 
-    .btn-primary>i {
+    /* .sb-btn-primary {
+        font-size: 20px;
+    } */
+
+    .btn.sb-btn-primary>i {
         font-size: 24px;
+        line-height: 1;
     }
 }
 </style>

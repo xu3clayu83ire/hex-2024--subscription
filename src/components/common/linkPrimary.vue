@@ -11,7 +11,7 @@ const text = props.text;
 <style scoped>
 .sb-link-primary {
     display: inline-block;
-    color: #569573 !important;
+    color: #569573;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
@@ -20,12 +20,12 @@ const text = props.text;
 
 .sb-link-primary:hover,
 .sb-link-primary:active {
-    color: #406c55 !important;
+    color: #406c55;
 }
 
 
 .sb-link-primary.disabled {
-    color: #ADB5BD !important;
+    color: #ADB5BD;
 }
 
 @media (min-width: 992px) {

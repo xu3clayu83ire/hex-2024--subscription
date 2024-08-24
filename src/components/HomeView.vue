@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import btnPrimary from '@/components/common/btnPrimary.vue';
 import linkPrimary from '@/components/common/linkPrimary.vue';
+import btnPagination from '@/components/common/btnPagination.vue';
 </script>
 
 <template>
@@ -12,11 +13,13 @@ import linkPrimary from '@/components/common/linkPrimary.vue';
   <br>
   <btnPrimary text="登入 / 註冊"></btnPrimary>
   <br>
-  <btnPrimary text="馬上訂閱" isShowArrow="true"></btnPrimary>
+  <btnPrimary text="馬上訂閱" isShowArrow="true" class="fw-bolder fs-5"></btnPrimary>
   <br>
   <linkPrimary text="Read More" class="fs-5"></linkPrimary>
   <br>
   <linkPrimary text="View More" class=""></linkPrimary>
+  <br>
+  <btnPagination></btnPagination>
   <br>
 </template>
 
