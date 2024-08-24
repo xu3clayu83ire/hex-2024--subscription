@@ -28,6 +28,7 @@ const isShowArrow = props.isShowArrow;
     line-height: 1.2;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .btn.sb-btn-primary>i {
