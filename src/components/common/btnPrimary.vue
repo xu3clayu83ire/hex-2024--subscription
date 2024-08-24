@@ -55,9 +55,10 @@ const isShowArrow = props.isShowArrow;
         padding: 16px 24px;
     }
 
-    /* .sb-btn-primary {
+    .btn.sb-btn-primary {
         font-size: 20px;
-    } */
+        line-height: 24px;
+    }
 
     .btn.sb-btn-primary>i {
         font-size: 24px;
