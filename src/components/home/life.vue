@@ -1,39 +1,41 @@
 <template>
-    <div class="life container py-13 py-lg-15">
-        <div class="row mb-6 mb-lg-11">
-            <div class="col">
-                <div class="d-flex justify-content-lg-between">
-                    <h2 class="sb-section-title-primary">品味生活</h2>
-                    <btnPagination class="d-none d-lg-block"></btnPagination>
+    <div class="life">
+        <div class="container py-13 py-lg-15">
+            <div class="row mb-6 mb-lg-11">
+                <div class="col">
+                    <div class="d-flex justify-content-lg-between">
+                        <h2 class="sb-section-title-primary">品味生活</h2>
+                        <btnPagination class="d-none d-lg-block"></btnPagination>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row g-6">
-            <div v-for=" data in datas" :key="data.id" class="col-lg-4">
-                <!-- card -->
-                <div class="life-card">
-                    <div class="life-card-header mb-6 mb-lg-10">
-                        <h2>{{ data.title }}</h2>
-                    </div>
-                    <div class="life-card-body  mb-6 mb-lg-10">
-                        <div class="life-card-body-img mb-6 mb-lg-10">
-                            <img :src="data.imageLg" class="d-lg-block d-none" :alt="data.title">
-                            <img :src="data.imageSm" class="d-lg-none" :alt="data.title">
+            <div class="row g-6">
+                <div v-for=" data in datas" :key="data.id" class="col-lg-4">
+                    <!-- card -->
+                    <div class="life-card">
+                        <div class="life-card-header mb-6 mb-lg-10">
+                            <h2>{{ data.title }}</h2>
                         </div>
-                        <ul class="life-card-body-list">
-                            <li v-for=" (item, idx) in data.contentList" :key="idx">{{ item }}</li>
-                        </ul>
+                        <div class="life-card-body  mb-6 mb-lg-10">
+                            <div class="life-card-body-img mb-6 mb-lg-10">
+                                <img :src="data.imageLg" class="d-lg-block d-none" :alt="data.title">
+                                <img :src="data.imageSm" class="d-lg-none" :alt="data.title">
+                            </div>
+                            <ul class="life-card-body-list">
+                                <li v-for=" (item, idx) in data.contentList" :key="idx">{{ item }}</li>
+                            </ul>
+                        </div>
+                        <div class="life-card-footer text-center">
+                            <linkPrimary :text="linkText" class="me-3"></linkPrimary>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#569573"
+                                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                            </svg>
+                        </div>
                     </div>
-                    <div class="life-card-footer text-center">
-                        <linkPrimary :text="linkText" class="me-3"></linkPrimary>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#569573"
-                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                        </svg>
-                    </div>
+                    <!-- card -->
                 </div>
-                <!-- card -->
             </div>
         </div>
     </div>
@@ -53,6 +55,7 @@
 }
 
 .life .life-card .life-card-body .life-card-body-img>img {
+    max-width: 351px;
     width: 100%;
     height: 192px;
     border-radius: 4px;

@@ -9,7 +9,7 @@
                 </div>
                 <div class="col">
                     <h3 class="fs-4 fw-bold text-center text-lg-end">歡迎投稿與我們分享</h3>
-                    <div class="mt-10 mt-lg-4">
+                    <div class="mt-10 mt-lg-4 text-center text-lg-end">
                         <btnPrimary :text="btnText" class="footer-sb-btn-primary" />
                     </div>
                 </div>
