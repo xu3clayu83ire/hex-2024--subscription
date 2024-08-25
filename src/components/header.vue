@@ -23,6 +23,11 @@
                 <div>
                     <form class="sb-navbar-search d-flex mb-6 mb-lg-0">
                         <input class="form-control" type="search" placeholder="搜尋文章" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#569573"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
                     </form>
                 </div>
                 <ul class="navbar-nav align-items-lg-center">
@@ -85,8 +90,19 @@ nav.navbar .sb-navbar-toggler>svg.active {
 }
 
 /** sb-navbar-search */
+.sb-navbar-search {
+    position: relative;
+}
+
+.sb-navbar-search>svg {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+}
+
 nav.navbar .sb-navbar-search>.form-control {
     border-radius: 100px;
+    padding: 12px 20px;
 }
 
 nav.navbar .sb-navbar-search>.form-control:focus {
