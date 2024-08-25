@@ -14,8 +14,7 @@ const text = props.text;
     color: #569573;
     font-size: 16px;
     font-weight: 700;
-    line-height: 24px;
-    /*1.2;*/
+    line-height: 1.5;
 }
 
 .sb-link-primary:hover,
@@ -32,6 +31,7 @@ const text = props.text;
 
     .sb-link-primary {
         font-size: 20px;
+        line-height: 1.2;
     }
 
 }

@@ -1,5 +1,5 @@
 <template>
-    <button type="button" class="btn sb-btn sb-btn-primary" :class="[isShowArrow ? 'sb-btn-icon' : '']">
+    <button type="button" class="btn sb-btn sb-btn-primary">
         {{ text }}
         <svg v-if="isShowArrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
             class="bi bi-arrow-right ms-3" viewBox="0 0 16 16">
@@ -18,14 +18,12 @@ const isShowArrow = props.isShowArrow;
 </script>
 
 <style scoped>
-.sb-btn-icon {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-}
-
 .btn.sb-btn {
     padding: 12px 20px;
+}
+
+.btn.sb-btn>svg {
+    vertical-align: text-bottom;
 }
 
 .btn.sb-btn-primary {

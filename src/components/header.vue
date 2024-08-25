@@ -1,6 +1,6 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-sb-primary-100 pb-1 py-lg-0">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light pb-1 py-lg-0">
+        <div class="container sb-navbar-border">
             <a id="navbarBrand" class="navbar-brand me-lg-10" href="#">
                 <img src="../assets/images/logo-lg.svg" class="d-none d-lg-block" alt="logo">
                 <img src="../assets/images/logo-sm.svg" class="d-lg-none" alt="logo">
@@ -39,7 +39,6 @@
                         <btnPrimary :text="btnLogonText" class="w-100 fs-6 lh-sm"></btnPrimary>
                     </li>
                 </ul>
-
             </div>
         </div>
     </nav>
@@ -93,5 +92,11 @@ nav.navbar .sb-navbar-search>.form-control {
 nav.navbar .sb-navbar-search>.form-control:focus {
     border-color: #DEE2E6;
     box-shadow: 0 0 0 0.25rem #e9ecef;
+}
+
+@media (min-width: 992px) {
+    nav.navbar .sb-navbar-border {
+        border-bottom: 1px solid #ADB5BD;
+    }
 }
 </style>

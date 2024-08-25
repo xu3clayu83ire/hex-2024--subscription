@@ -1,12 +1,12 @@
 <template>
     <div class="sb-pagination">
-        <div class="sb-pagination-number">
+        <div class="sb-pagination-number" v-if="isShowNumber">
             <span>1</span>
             <span>/</span>
             <span>5</span>
         </div>
         <div class="d-flex align-items-center">
-            <button type="button" class="btn sb-btn-outline-secondary">
+            <button type="button" class="btn btn-outline-secondary sb-btn-outline-secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-arrow-left" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -14,7 +14,7 @@
                 </svg>
             </button>
             <hr class="sb-pagination-hr">
-            <button type="button" class="btn sb-btn-outline-secondary">
+            <button type="button" class="btn btn-outline-secondary sb-btn-outline-secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-arrow-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -27,6 +27,8 @@
 </template>
 
 <script setup>
+const props = defineProps(['isShowNumber'])
+const isShowArrow = props.isShowNumber;
 
 </script>
 
@@ -52,14 +54,11 @@
     color: #ADB5BD;
 }
 
-
-
 .sb-pagination-hr {
     color: #6C757D;
     width: 80px;
     margin: 0 20px;
 }
-
 
 .sb-btn-outline-secondary {
     padding: 4px 16px;
@@ -68,6 +67,13 @@
     border-radius: 100px;
 }
 
+.sb-btn-outline-secondary:hover,
+.sb-btn-outline-secondary:active,
+.sb-btn-outline-secondary:focus-visible {
+    color: #fff;
+    background-color: #6C757D;
+    border-color: #6C757D;
+}
 
 @media (min-width: 992px) {
     .sb-pagination {
