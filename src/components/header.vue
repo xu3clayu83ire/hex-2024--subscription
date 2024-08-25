@@ -41,7 +41,9 @@
                         <a class="nav-link p-3 py-lg-2 px-lg-5" href="#">關於我們</a>
                     </li>
                     <li class="mt-11 mt-lg-0 ms-lg-5">
-                        <btnPrimary :text="btnLogonText" class="w-100 fs-6 lh-sm"></btnPrimary>
+                        <RouterLink :to="{ name: 'register' }">
+                            <btnPrimary :text="btnLogonText" class="w-100 fs-6 lh-sm"></btnPrimary>
+                        </RouterLink>
                     </li>
                 </ul>
             </div>

@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="container">
-            <div class="row py-13 py-lg-15">
+            <!-- <div class="row py-13 py-lg-15">
                 <div class="col-lg-6 mb-4">
                     <h2 class="fs-2 text-center text-lg-start fw-bolder">
                         想看什麼主題由你決定！
@@ -13,7 +13,7 @@
                         <btnPrimary :text="btnText" class="footer-sb-btn-primary" />
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="footer-buttom row ">
                 <div class="col">
                     <p class="py-5 py-lg-6 text-sb-primary-400 text-center">©Vivre 2024 All right Reserved</p>
@@ -24,17 +24,17 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import btnPrimary from '@/components/common/btnPrimary.vue';
+// import { ref, onMounted } from 'vue'
+// import btnPrimary from '@/components/common/btnPrimary.vue';
 
-const btnText = ref('聯絡我們')
+// const btnText = ref('聯絡我們')
 
 </script>
 
 <style scoped>
-.footer-sb-btn-primary {
+/* .footer-sb-btn-primary {
     margin: 0 auto;
-}
+} */
 
 .footer-buttom {
     border-top: 1px solid #ADB5BD;

@@ -7,6 +7,7 @@ import HomeLife from '@/components/home/life.vue';
 import HomeNews from '@/components/home/news.vue';
 import HomeProject from '@/components/home/project.vue';
 import HomeTheme from '@/components/home/theme.vue';
+import HomeContact from '@/components/home/contact.vue';
 
 </script>
 
@@ -20,6 +21,7 @@ import HomeTheme from '@/components/home/theme.vue';
         <HomeHotsSm class="d-block d-lg-none" />
         <HomeLife />
         <!-- <HomeProject /> -->
+        <HomeContact />
     </main>
 </template>
 
