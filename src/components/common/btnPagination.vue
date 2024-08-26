@@ -28,7 +28,7 @@
 
 <script setup>
 const props = defineProps(['isShowNumber'])
-const isShowArrow = props.isShowNumber;
+const isShowNumber = props.isShowNumber;
 
 </script>
 
@@ -75,7 +75,7 @@ const isShowArrow = props.isShowNumber;
     border-color: #6C757D;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .sb-pagination {
         display: block;
     }

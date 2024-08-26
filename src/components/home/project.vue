@@ -2,7 +2,7 @@
     <div class="project bg-sb-primary-200">
         <div class="container py-13 py-lg-15">
             <div class="row">
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto text-center text-lg-start">
                     <div>
                         <!-- <badgePrimary :text="badgeText1"></badgePrimary> -->
                         <p class="project-title-desc mb-4">今天又不知道要去哪裡了嗎？</p>
@@ -13,20 +13,43 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="row">
-                        <div class="col-6 d-flex d-lg-block mt-lg-15">
+                    <div class="row d-none d-lg-flex">
+                        <div class="col-6 mt-lg-15">
+                            <linkImg :imgPath="datas[0].imagePath" :text="datas[0].title"
+                                :badgeText="datas[0].badgeText" class="mb-lg-11"></linkImg>
                             <linkImg :imgPath="datas[1].imagePath" :text="datas[1].title"
-                                :badgeText="datas[1].badgeText" class="mb-lg-11"></linkImg>
+                                :badgeText="datas[1].badgeText"></linkImg>
+                        </div>
+                        <div class="col-6 ">
+                            <linkImg :imgPath="datas[2].imagePath" :text="datas[2].title"
+                                :badgeText="datas[2].badgeText" class="mb-lg-11"></linkImg>
                             <linkImg :imgPath="datas[3].imagePath" :text="datas[3].title"
                                 :badgeText="datas[3].badgeText"></linkImg>
                         </div>
-                        <div class="col-6 d-flex d-lg-block">
-                            <linkImg :imgPath="datas[0].imagePath" :text="datas[0].title"
-                                :badgeText="datas[0].badgeText" class="mb-lg-11"></linkImg>
-                            <linkImg :imgPath="datas[2].imagePath" :text="datas[2].title"
-                                :badgeText="datas[2].badgeText"></linkImg>
-                        </div>
                     </div>
+                    <swiper :pagination="{ clickable: true }" :breakpoints="{
+                        0: {  //当屏幕宽度大于等于320
+                            slidesPerView: 1,
+                            spaceBetween: 24
+                        },
+                        375: {  //当屏幕宽度大于等于320
+                            slidesPerView: 1,
+                            spaceBetween: 24
+                        },
+                        // 768: {  //当屏幕宽度大于等于768 
+                        //     slidesPerView: 3,
+                        //     spaceBetween: 20
+                        // },
+                        // 1280: {  //当屏幕宽度大于等于1280
+                        //     slidesPerView: 4,
+                        //     spaceBetween: 30
+                        // }
+                    }" class="mySwiper mt-14 d-block d-lg-none">
+                        <swiper-slide v-for=" (item, idx) in datas" :key="item.id" class="mySwiperSlide mt-auto">
+                            <linkImg :imgPath="datas[idx].imagePath" :text="datas[idx].title"
+                                :badgeText="datas[idx].badgeText" class="mb-lg-11"></linkImg>
+                        </swiper-slide>
+                    </swiper>
                 </div>
             </div>
         </div>
@@ -50,28 +73,28 @@ const isShowArrow = ref(true)
 const datas = ref([
     {
         id: 1,
-        title: '山女孩的健行筆記',
-        imagePath: projects1,
-        badgeText: '編輯推薦'
-    },
-    {
-        id: 2,
         title: '親子露營要帶什麼？',
         imagePath: projects2,
         badgeText: '人氣行程'
     },
     {
-        id: 3,
-        title: '適合溜小孩的海邊景點推薦',
-        imagePath: projects3,
-        badgeText: '熱門文章'
-    },
-    {
-        id: 3,
+        id: 2,
         title: '質感房間改造攻略！',
         imagePath: projects4,
         badgeText: '編輯推薦'
     },
+    {
+        id: 3,
+        title: '山女孩的健行筆記',
+        imagePath: projects1,
+        badgeText: '編輯推薦'
+    },
+    {
+        id: 4,
+        title: '適合溜小孩的海邊景點推薦',
+        imagePath: projects3,
+        badgeText: '熱門文章'
+    }
 ])
 </script>
 
@@ -112,5 +135,17 @@ const datas = ref([
         font-size: 20px;
         font-weight: 900;
     }
+}
+
+.mySwiper {
+    max-width: 360px;
+    min-width: 306px;
+    width: 100%;
+}
+
+.mySwiperSlide {
+    max-width: 306px;
+    height: 252px;
+    margin-top: auto;
 }
 </style>

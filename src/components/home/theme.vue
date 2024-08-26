@@ -77,44 +77,44 @@ const datas = ref([
     {
         id: 2,
         text: '秘境尋蹤人',
-        imageLg: theme2,
-        imageSm: theme2sm,
-    },
-    {
-        id: 3,
-        text: '品味設計家',
         imageLg: theme3,
         imageSm: theme3sm,
     },
     {
-        id: 4,
-        text: '美食探險記',
-        imageLg: theme4,
-        imageSm: theme4sm,
-    },
-    {
-        id: 5,
-        text: '美學建築誌',
+        id: 3,
+        text: '品味設計家',
         imageLg: theme5,
         imageSm: theme5sm,
     },
     {
+        id: 4,
+        text: '美食探險記',
+        imageLg: theme8,
+        imageSm: theme8sm,
+    },
+    {
+        id: 5,
+        text: '美學建築誌',
+        imageLg: theme2,
+        imageSm: theme2sm,
+    },
+    {
         id: 6,
         text: '慢活生活行',
-        imageLg: theme6,
-        imageSm: theme6sm,
+        imageLg: theme4,
+        imageSm: theme4sm,
     },
     {
         id: 7,
         text: '工藝匠心賞',
-        imageLg: theme7,
-        imageSm: theme7sm,
+        imageLg: theme6,
+        imageSm: theme6sm,
     },
     {
         id: 8,
         text: '時尚先鋒派',
-        imageLg: theme8,
-        imageSm: theme8sm,
+        imageLg: theme7,
+        imageSm: theme7sm,
     }
 ]);
 

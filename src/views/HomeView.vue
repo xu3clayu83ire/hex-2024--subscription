@@ -20,7 +20,7 @@ import HomeContact from '@/components/home/contact.vue';
         <HomeHots class="d-none d-lg-block" />
         <HomeHotsSm class="d-block d-lg-none" />
         <HomeLife />
-        <!-- <HomeProject /> -->
+        <HomeProject />
         <HomeContact />
     </main>
 </template>
