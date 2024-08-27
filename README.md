@@ -10,6 +10,7 @@ npm run dev
 npm i bootstrap
 npm i vue-router
 npm i bootstrap-icons
+npm i vue-awesome-swiper
 ~~npm i --save bootstrap @popperjs/core~~
 
 //devDependencies
