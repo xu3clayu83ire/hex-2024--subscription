@@ -13,19 +13,19 @@
                 <div v-for=" data in datas" :key="data.id" class="col-lg-4">
                     <!-- card -->
                     <div class="life-card">
-                        <div class="life-card-header mb-6 mb-lg-10">
+                        <div class="card-header mb-6 mb-lg-10">
                             <h2>{{ data.title }}</h2>
                         </div>
-                        <div class="life-card-body  mb-6 mb-lg-10">
-                            <div class="life-card-body-img mb-6 mb-lg-10">
+                        <div class="card-body  mb-6 mb-lg-10">
+                            <div class="mb-6 mb-lg-10">
                                 <img :src="data.imageLg" class="d-lg-block d-none" :alt="data.title">
                                 <img :src="data.imageSm" class="d-lg-none" :alt="data.title">
                             </div>
-                            <ul class="life-card-body-list">
+                            <ul>
                                 <li v-for=" (item, idx) in data.contentList" :key="idx">{{ item }}</li>
                             </ul>
                         </div>
-                        <div class="life-card-footer text-center">
+                        <div class="card-footer text-center">
                             <linkPrimary :text="linkText" class="me-3"></linkPrimary>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#569573"
                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -41,46 +41,53 @@
     </div>
 </template>
 
-<style scoped>
-.lift .life-card {
-    max-width: 351px;
-    margin: 0 auto;
-}
+<style scoped lang="scss">
+@import "@/assets/styles/imports/_breakpoint";
+@import "@/assets/styles/imports/_colors";
+// @import "@/assets/styles/imports/_variables";
 
-.life .life-card .life-card-header>h2 {
-    font-size: 40px;
-    line-height: 1.2;
-    font-weight: 900;
-    color: #6E6B67;
-}
+.life .life {
+    &-card {
+        max-width: 351px;
+        margin: 0 auto;
 
-.life .life-card .life-card-body .life-card-body-img>img {
-    max-width: 351px;
-    width: 100%;
-    height: 192px;
-    border-radius: 4px;
-}
-
-.life .life-card .life-card-body .life-card-body-list>li:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-.life .life-card .life-card-footer>svg {
-    vertical-align: text-bottom;
-}
-
-@media (min-width: 992px) {
-    .article .article-card {
-        max-width: 416px;
+        @include pc {
+            max-width: 416px;
+        }
     }
 
-    .life .life-card .life-card-header>h2 {
-        font-size: 52px;
-        line-height: 1.5;
+    &-card>.card-header>h2 {
+        font-size: 40px;
+        line-height: 1.2;
+        font-weight: 900;
+        color: $sb-primary-400;
+
+        @include pc {
+            font-size: 52px;
+            line-height: 1.5;
+        }
     }
 
-    .life .lift-card .lift-card-body .lift-card-body-list>li {
-        font-size: 20px;
+    &-card>.card-body img {
+        max-width: 351px;
+        width: 100%;
+        height: 192px;
+        border-radius: 4px;
+    }
+
+    &-card>.card-body ul>li {
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        @include pc {
+            font-size: 20px;
+        }
+    }
+
+    &-card>.card-footer svg {
+        vertical-align: text-bottom;
     }
 }
 </style>

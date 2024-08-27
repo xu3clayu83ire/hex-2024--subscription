@@ -1,0 +1,40 @@
+$sb-primary-400: #6e6b67 !default;
+$sb-primary-300: #e8e3da !default;
+$sb-primary-200: #fffbe5 !default;
+$sb-primary-100: #fffdf5 !default;
+$sb-accent-300: #406c55 !default;
+$sb-accent-200: #569573 !default;
+$sb-accent-100: #e0efde !default;
+$sb-info      :#d65f5f !default;
+$sb-success   :#ffb054 !default;
+$sb-warning   :#2cc585 !default;
+$sb-danger    :#4a75ff !default;
+$sb-gray-100: #f8f9fa !default;//$gray-100;
+$sb-gray-200: #dee2e6 !default;//$gray-300;
+$sb-gray-300: #adb5bd !default;//$gray-500;
+$sb-gray-400: #6c757d !default;//$gray-600;
+$sb-gray-500: #343a40 !default;//$gray-800;
+$sb-gray-600: #212529 !default;//$gray-900;
+
+
+$sb-colors: (
+
+  "sb-primary-400":$sb-primary-400,
+  "sb-primary-300":$sb-primary-300,
+  "sb-primary-200":$sb-primary-200,
+  "sb-primary-100":$sb-primary-100,
+  "sb-accent-300":$sb-accent-300,
+  "sb-accent-200":$sb-accent-200,
+  "sb-accent-100":$sb-accent-100,
+  "sb-info":$sb-info,
+  "sb-success":$sb-success,
+  "sb-warning":$sb-warning,
+  "sb-danger":$sb-danger,
+  "sb-gray-100":$sb-gray-100,
+  "sb-gray-200":$sb-gray-200,
+  "sb-gray-300":$sb-gray-300,
+  "sb-gray-400":$sb-gray-400,
+  "sb-gray-500":$sb-gray-500,
+  "sb-gray-600":$sb-gray-600
+  
+) !default;

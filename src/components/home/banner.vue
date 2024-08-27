@@ -9,7 +9,7 @@
                         alt="">
                 </div>
                 <div class="banner-text-wrap">
-                    <div class="banner-text">
+                    <div>
                         <p class="mb-2 mb-lg-3 text-white">獻給新世代的生活風格誌</p>
                         <h2 class="mb-5 mb-lg-6 text-white fw-bolder">一起探索生活的無限可能</h2>
                         <btnPrimary :text="btnText" :isShowArrow="isShowArrow" />
@@ -29,55 +29,55 @@ const isShowArrow = ref(true)
 
 </script>
 
-<style scoped>
-.banner .banner-img-wrap {
-    position: relative;
-}
+<style scoped lang="scss">
+@import "@/assets/styles/imports/_breakpoint";
+//@import "@/assets/styles/imports/_colors";
+//@import "@/assets/styles/imports/_variables";
 
-.banner .banner-text-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-.banner .banner-text-wrap>.banner-text {
-    text-align: center;
-    margin-bottom: 48px;
-}
-
-.banner .banner-text-wrap>.banner-text>p {
-    font-size: 16px;
-}
-
-.banner .banner-text-wrap>.banner-text>h2 {
-    font-size: 28px;
-}
-
-@media (min-width: 992px) {
-
-    .banner .banner-text-wrap {
-        justify-content: start;
-        align-items: center;
+.banner .banner {
+    &-img-wrap {
+        position: relative;
     }
 
-    .banner .banner-text-wrap>.banner-text {
-        text-align: start;
-        margin-left: 61px;
-        margin-bottom: 0px;
+    &-text-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+
+        @include pc {
+            justify-content: start;
+            align-items: center;
+        }
     }
 
-    .banner .banner-text-wrap>.banner-text>p {
-        font-size: 20px;
+    &-text-wrap>div {
+        text-align: center;
+        margin-bottom: 48px;
+
+        @include pc {
+            text-align: start;
+            margin-left: 61px;
+            margin-bottom: 0px;
+        }
     }
 
-    .banner .banner-text-wrap>.banner-text>h2 {
-        font-size: 40px;
+    &-text-wrap>div>p {
+        @include pc {
+            font-size: 20px;
+        }
     }
 
+    &-text-wrap>div>h2 {
+        font-size: 28px;
+
+        @include pc {
+            font-size: 40px;
+        }
+    }
 }
 </style>

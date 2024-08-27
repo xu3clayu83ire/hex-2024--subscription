@@ -54,7 +54,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
-import { Collapse } from 'bootstrap';
 import btnPrimary from '@/components/common/btnPrimary.vue';
 
 const btnLogonText = ref('登入 / 註冊')
@@ -81,40 +80,45 @@ onMounted(() => {
 
 </script>
 
-<style scoped>
-/** sb-navbar-toggler */
-nav.navbar .sb-navbar-toggler>svg {
-    display: none;
-}
+<style scoped lang="scss">
+@import "@/assets/styles/imports/_breakpoint";
+@import "@/assets/styles/imports/_colors";
+// @import "@/assets/styles/imports/_variables";
 
-nav.navbar .sb-navbar-toggler>svg.active {
-    display: block;
-}
+nav.navbar .sb-navbar {
 
-/** sb-navbar-search */
-.sb-navbar-search {
-    position: relative;
-}
+    &-toggler>svg {
+        display: none;
 
-.sb-navbar-search>svg {
-    position: absolute;
-    top: 12px;
-    right: 16px;
-}
+        &.active {
+            display: block;
+        }
+    }
 
-nav.navbar .sb-navbar-search>.form-control {
-    border-radius: 100px;
-    padding: 12px 20px;
-}
+    &-search {
+        position: relative;
 
-nav.navbar .sb-navbar-search>.form-control:focus {
-    border-color: #DEE2E6;
-    box-shadow: 0 0 0 0.25rem #e9ecef;
-}
+        svg {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+        }
 
-@media (min-width: 992px) {
-    nav.navbar .sb-navbar-border {
-        border-bottom: 1px solid #ADB5BD;
+        .form-control {
+            border-radius: 100px;
+            padding: 12px 20px;
+
+            &:focus {
+                border-color: $sb-gray-200;
+                box-shadow: 0 0 0 0.25rem #e9ecef;
+            }
+        }
+    }
+
+    &-border {
+        @include pc {
+            border-bottom: 1px solid $sb-gray-300;
+        }
     }
 }
 </style>

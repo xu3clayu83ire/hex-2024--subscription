@@ -1,36 +1,29 @@
-.sb-section-title-primary {
-  font-weight: 900;
-  font-size: 24px;
-//   color: $sb-gray-500;
-}
+@import "./imports/_breakpoint";
 
-.sb-badge-primary {
-  font-size: 700;
-  font-size: 12px;
-  padding: 4px 8px;
-  line-height: 19.2px;//1.2;
-  border-radius: 4px;
-  color: $sb-primary-400;
-  background-color: $sb-primary-300;
-}
-
-.sb-link-primary{
-    color: $sb-accent-200;
-}
-
-@media (min-width: 992px) {
-  .sb-section-title-primary {
-    font-size: 32px;
-  }
-
-  .sb-badge-primary {
-    font-size: 16px;
+.sb-section-title {
+  &-primary {
+    font-weight: 900;
+    font-size: 24px;
+    //   color: $sb-gray-500;
+    
+    @include pc {
+      font-size: 32px;
+    }
   }
 }
 
-/** ---=======================--- */
-/** utilities */
-.sb-btn-lg {
-  font-weight: 900;
-  font-size: 20px;
+.sb-badge {
+  &-primary {
+    font-weight: 700;
+    font-size: 12px;
+    padding: 4px 8px;
+    line-height: 19.2px; //1.2;
+    border-radius: 4px;
+    color: $sb-primary-400;
+    background-color: $sb-primary-300;
+
+    @include pc {
+      font-size: 16px;
+    }
+  }
 }

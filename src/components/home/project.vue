@@ -4,7 +4,6 @@
             <div class="row">
                 <div class="col-lg-6 my-auto text-center text-lg-start">
                     <div>
-                        <!-- <badgePrimary :text="badgeText1"></badgePrimary> -->
                         <p class="project-title-desc mb-4">今天又不知道要去哪裡了嗎？</p>
                         <h2 class="sb-section-title-primary">
                             <span class="d-block d-lg-inline">Vivre</span>給你意想不到生活風格提案
@@ -28,22 +27,14 @@
                         </div>
                     </div>
                     <swiper :pagination="{ clickable: true }" :breakpoints="{
-                        0: {  //当屏幕宽度大于等于320
+                        0: {
                             slidesPerView: 1,
                             spaceBetween: 24
                         },
-                        375: {  //当屏幕宽度大于等于320
+                        375: {
                             slidesPerView: 1,
                             spaceBetween: 24
                         },
-                        // 768: {  //当屏幕宽度大于等于768 
-                        //     slidesPerView: 3,
-                        //     spaceBetween: 20
-                        // },
-                        // 1280: {  //当屏幕宽度大于等于1280
-                        //     slidesPerView: 4,
-                        //     spaceBetween: 30
-                        // }
                     }" class="mySwiper mt-14 d-block d-lg-none">
                         <swiper-slide v-for=" (item, idx) in datas" :key="item.id" class="mySwiperSlide mt-auto">
                             <linkImg :imgPath="datas[idx].imagePath" :text="datas[idx].title"
@@ -59,13 +50,14 @@
 <script setup>
 import { ref } from 'vue'
 import btnPrimary from '@/components/common/btnPrimary.vue';
-import badgePrimary from '@/components/common/badgePrimary.vue';
 import linkImg from '@/components/common/linkImg.vue';
 
 import projects1 from '@/assets/images/home/section-project/projects-1.png';//山女孩的健行筆記
 import projects2 from '@/assets/images/home/section-project/projects-2.png';//親子露營要帶什麼？
 import projects3 from '@/assets/images/home/section-project/projects-3.png';//適合溜小孩的海邊景點推薦
 import projects4 from '@/assets/images/home/section-project/projects-4.png';//質感房間改造攻略！
+
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 
 const btnText = ref('馬上訂閱')
 const isShowArrow = ref(true)
@@ -98,42 +90,19 @@ const datas = ref([
 ])
 </script>
 
-<style scoped>
-/* .project img {
-    max-width: 306px;
-    width: 100%;
-    height: 236px;
-    border-radius: 4px;
-    object-fit: cover;
-} */
+<style scoped lang="scss">
+@import "@/assets/styles/imports/_breakpoint";
+@import "@/assets/styles/imports/_colors";
+// @import "@/assets/styles/imports/_variables";
 
-.project p.project-title-desc {
-    color: #6C757D;
-}
+.project .project {
+    &-title-desc {
+        color: $sb-gray-400;
 
-/* .project .project-img-wrap {
-    position: relative;
-} */
-/* 
-.project .project-img-wrap .project-img-text {
-    position: absolute;
-    color: #fff;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 12px 12px 16px 12px;
-} */
-
-/* .project .project-img-wrap .project-img-badge {
-    position: absolute;
-    top: -16px;
-    left: 16px;
-} */
-
-@media (min-width: 992px) {
-    .project p.project-title-desc {
-        font-size: 20px;
-        font-weight: 900;
+        @include pc {
+            font-size: 20px;
+            font-weight: 900;
+        }
     }
 }
 

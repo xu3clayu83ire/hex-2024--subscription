@@ -23,7 +23,6 @@ import { ref } from 'vue'
 import btnPrimary from '@/components/common/btnPrimary.vue';
 
 const btnText = ref('聯絡我們')
-const isShowArrow = ref(true)
 
 </script>
 

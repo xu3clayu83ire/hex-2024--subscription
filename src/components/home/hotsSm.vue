@@ -5,18 +5,18 @@
             <swiper :pagination="{ clickable: true }" :slides-per-view="1" :space-between="10" class="mySwiper">
                 <swiper-slide v-for=" data in datas" :key="data.id">
                     <!-- card -->
-                    <div class="hots-content-card-sm bg-white mx-auto p-4 rounded-3">
-                        <div class="header mb-4">
+                    <div class="hotsSm-card bg-white mx-auto p-4 rounded-3">
+                        <div class="card-header mb-4">
                             <h3 class="text-sb-accent-200 fs-5 mb-3 fw-bolder">{{ data.title }}</h3>
                             <ul class="fw-semibold lh-base">
                                 <li v-for=" (item, idx) in data.contentList" :key="idx" class="text-truncate">{{
                                     item }}</li>
                             </ul>
                         </div>
-                        <div class="body mb-4">
+                        <div class="card-body mb-4">
                             <img :src="data.imagePath" alt="data.title" width="292" height="157">
                         </div>
-                        <div class="footer">
+                        <div class="card-footer">
                             <div class="">
                                 <div class="mb-4">
                                     <span v-for=" (item, idx) in data.tags" :key="idx"
@@ -40,21 +40,27 @@
     </div>
 </template>
 
-<style scoped>
-.hotsSm .hots-content-card-sm {
-    max-width: 330px;
-}
+<style scoped lang="scss">
+//@import "@/assets/styles/imports/_breakpoint";
+//@import "@/assets/styles/imports/_colors";
+@import "@/assets/styles/imports/_variables";
 
-.hotsSm .hots-content-card-sm .header ul {
-    letter-spacing: 0.06em;
-}
+.hotsSm .hotsSm {
+    &-card {
+        max-width: 330px;
+    }
 
-.hotsSm .hots-content-card-sm .header ul>li:not(:last-child) {
-    margin-bottom: 8px;
-}
+    &-card>.card-header ul {
+        letter-spacing: $letter-spacing-sm;
+    }
 
-.hotsSm .hots-content-card-sm .footer span.sb-badge-primary:not(:last-child) {
-    margin-right: 8px;
+    &-card>.card-header ul>li:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    &-card>.card-footer span.sb-badge-primary:not(:last-child) {
+        margin-right: 8px;
+    }
 }
 
 .mySwiper {
@@ -74,7 +80,6 @@ import hots3sm from '@/assets/images/home/section-hots/sm/hots-3-sm.png';
 import hots4sm from '@/assets/images/home/section-hots/sm/hots-4-sm.png';
 import hots5sm from '@/assets/images/home/section-hots/sm/hots-5-sm.png';
 
-import SwiperClass from 'Swiper'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 
 const linkText = ref('View More')

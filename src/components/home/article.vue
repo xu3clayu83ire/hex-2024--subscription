@@ -33,8 +33,11 @@
                                         {{ data.content }}
                                     </p>
                                 </div>
-                                <div class="article-card-footer pb-6">
+                                <div class="article-card-footer pb-6 d-flex justify-content-between align-items-center">
                                     <linkPrimary :text="linkText" class="fs-4 py-2"></linkPrimary>
+                                    <div>
+                                        <span class="badge sb-badge-primary" v-if="data.tag">{{ data.tag }}</span>
+                                    </div>
                                 </div>
                             </div>
                             <!-- card -->
@@ -46,36 +49,38 @@
     </div>
 </template>
 
-<style scoped>
-.article .article-card {
-    max-width: 324px;
-    margin: 0 auto;
-    border-bottom: 1px solid #343A40;
-}
+<style scoped lang="scss">
+@import "@/assets/styles/imports/_breakpoint";
+@import "@/assets/styles/imports/_colors";
+@import "@/assets/styles/imports/_variables";
 
-.article .article-card>.article-card-header>img {
-    width: 100%;
-    height: 192px;
-}
+.article .article {
+    &-card {
+        max-width: 324px;
+        margin: 0 auto;
+        border-bottom: 1px solid $sb-gray-500;
 
-.article .article-card>.article-card-body>p {
-    letter-spacing: 0.06em;
-}
+        @include pc {
+            max-width: 404px;
+        }
+    }
 
-@media (min-width: 992px) {
-    .article .article-card {
-        max-width: 404px;
+    &-card-header>img {
+        width: 100%;
+        height: 192px;
+    }
+
+    &-card-body>p {
+        letter-spacing: $letter-spacing-sm;
     }
 }
+
 
 .mySwiper {
     width: 100%;
     height: auto;
 
-}
-
-@media (min-width: 992px) {
-    .mySwiper {
+    @include pc {
         /* max-width: 856px; */
         margin-left: auto;
     }
@@ -104,14 +109,16 @@ const datas = ref([
         text: '私人島嶼的露營奇遇記',
         imageLg: articles1,
         imageSm: articles1sm,
-        content: '遠離塵囂,用全新的眼光重塑生活的舒適本味。徜徉在環山綠野間,在這處隱世私家別墅裡,盡情領略池畔優閒時光,任林間微風撫面,聆聽花鳥嘶啞之音,重拾內心深處的寧..'
+        content: '遠離塵囂,用全新的眼光重塑生活的舒適本味。徜徉在環山綠野間,在這處隱世私家別墅裡,盡情領略池畔優閒時光,任林間微風撫面,聆聽花鳥嘶啞之音,重拾內心深處的寧..',
+        tag: ''
     },
     {
         id: 2,
         text: '窺探米其林三星主廚的絕密手藝',
         imageLg: articles2,
         imageSm: articles2sm,
-        content: '在這間隱世餐廳,來一場味蕾與靈魂的盛宴。幽微燈火下,透過巨匠大師的獨門料理,領略食材中蘊藏的大自然馨香脈絡。營造只屬於你我的私密小宇宙,沉浸其中,品嘗人...'
+        content: '在這間隱世餐廳,來一場味蕾與靈魂的盛宴。幽微燈火下,透過巨匠大師的獨門料理,領略食材中蘊藏的大自然馨香脈絡。營造只屬於你我的私密小宇宙,沉浸其中,品嘗人...',
+        tag: '會員專屬'
     },
 ])
 

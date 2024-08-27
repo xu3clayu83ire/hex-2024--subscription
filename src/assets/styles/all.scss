@@ -1,33 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Serif+TC:wght@200..900&display=swap');
 
 @import "~/bootstrap/scss/functions";
+
 @import "./variables";
-@import "~/bootstrap/scss/maps";
-@import "~/bootstrap/scss/mixins";
-@import "~/bootstrap/scss/utilities";
 
+@import "./utilities";
 
-$all-colors: map-merge-multiple($sb-colors);
-
-$utilities: map-merge($utilities,
-        ("background-color": map-merge(map-get($utilities, "background-color"),
-                (values: map-merge(map-get(map-get($utilities, "background-color"), "values"),
-                        ($all-colors ),
-                    ),
-                ),
-            ),
-        ));
-
-$utilities: map-merge($utilities,
-        ("color": map-merge(map-get($utilities, "color"),
-                (values: map-merge(map-get(map-get($utilities, "color"), "values"),
-                        ($all-colors ),
-                    ),
-                ),
-            ),
-        ));
-
-@import "bootstrap/scss/utilities/api";
 @import "~/bootstrap/scss/bootstrap";
+
 @import "./global";
+
 @import "./custom";

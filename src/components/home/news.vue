@@ -14,8 +14,7 @@
                                     <li><i class="bi bi-check me-3"></i>定期電子報</li>
                                     <li><i class="bi bi-check me-3"></i>年度精選禮物</li>
                                     <li><i class="bi bi-check me-3"></i>24 /7 優先客戶服務</li>
-                                    <li><i class="bi bi-check me-3"></i>為每個成員量身打造專屬行程
-                                    </li>
+                                    <li><i class="bi bi-check me-3"></i>為每個成員量身打造專屬行程</li>
                                 </ul>
                             </div>
                             <btnPrimary :text="btnText" />
@@ -43,65 +42,68 @@ import btnPrimary from '@/components/common/btnPrimary.vue';
 const btnText = ref('我想了解')
 
 </script>
-<style scoped>
-.news .news-wrap {
-    position: relative;
-}
+<style scoped lang="scss">
+@import "@/assets/styles/imports/_breakpoint";
+@import "@/assets/styles/imports/_colors";
+@import "@/assets/styles/imports/_variables";
 
-.news .news-img-end {
-    position: absolute;
-    bottom: -55px;
-    right: -60px;
-}
-
-.news .news-img-start,
-.news .news-img-end-lg {
-    display: none;
-}
-
-.news .news-title-desc {
-    color: #569573;
-}
-
-.news .news-content-list li {
-    color: #6C757D;
-    font-weight: 600;
-    line-height: 1.5;
-    letter-spacing: 0.06em;
-}
-
-
-.news .news-content-list li:not(:last-child) {
-    margin-bottom: 16px;
-    color: #6C757D;
-    font-weight: 600;
-    line-height: 1.5;
-    letter-spacing: 0.06em;
-}
-
-@media (min-width: 992px) {
-    .news .news-title-desc {
-        color: #6E6B67;
-        font-size: 24px;
-        font-weight: 900;
+.news .news {
+    &-wrap {
+        position: relative;
     }
 
-    .news .news-img-end {
+    &-title-desc {
+        color: $sb-accent-200;
+
+        @include pc {
+            color: $sb-primary-400;
+            font-size: 24px;
+            font-weight: 900;
+        }
+    }
+
+    &-content-list li {
+        color: $sb-gray-400;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: $letter-spacing-sm;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &-img-end {
+        position: absolute;
+        bottom: -55px;
+        right: -60px;
+
+        @include pc {
+            display: none;
+        }
+    }
+
+    &-img-end-lg {
         display: none;
+
+        @include pc {
+            display: block;
+            position: absolute;
+            bottom: -90px;
+            right: 0;
+        }
     }
 
-    .news .news-img-end-lg {
-        display: block;
-        position: absolute;
-        bottom: -90px;
-        right: 0;
+    &-img-start {
+        display: none;
+
+        @include pc {
+            display: block;
+            position: absolute;
+            bottom: -90px;
+            left: 0;
+        }
     }
 
-    .news .news-img-start {
-        display: block;
-        position: absolute;
-        bottom: -90px;
-        left: 0;
-    }
 }
 </style>

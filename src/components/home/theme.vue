@@ -19,30 +19,35 @@
     </div>
 </template>
 
-<style scoped>
-.theme a.theme-item-wrap {
-    position: relative;
-}
+<style scoped lang="scss">
+@import "@/assets/styles/imports/_breakpoint";
+// @import "@/assets/styles/imports/_colors";
+// @import "@/assets/styles/imports/_variables";
 
-.theme .theme-item-img>img {
-    border-radius: 20px 0px;
-}
+.theme .theme {
+    &-item-wrap {
+        position: relative;
+    }
 
-.theme .theme-item-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    &-item-img img {
+        border-radius: 20px 0px;
+    }
 
-@media (min-width: 992px) {
+    &-item-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-    .theme .theme-item-text>p {
-        font-size: 20px;
+    &-item-text>p {
+        @include pc {
+            font-size: 20px;
+        }
     }
 }
 </style>

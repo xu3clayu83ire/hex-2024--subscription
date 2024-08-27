@@ -15,17 +15,24 @@ const text = props.text;
 
 </script>
 
-<style scoped>
-.sb-badge-primary.badge>svg {
-    vertical-align: top;
-}
+<style scoped lang="scss">
+.sb-badge-primary {
 
-.sb-badge-primary.badge {
-    border: 1px solid #E0EFDE;
-    padding: 8px 12px;
-    color: #406C55;
-    background-color: #fff;
-    font-size: 16px;
-    border-radius: 4px;
+    $sb-accent-300: #406c55;
+    $sb-accent-100: #e0efde;
+
+    &.badge {
+        border: 1px solid $sb-accent-100;
+        padding: 8px 12px;
+        color: $sb-accent-300;
+        background-color: #fff;
+        font-size: 16px;
+        border-radius: 4px;
+
+        svg {
+            vertical-align: top;
+        }
+    }
+
 }
 </style>
