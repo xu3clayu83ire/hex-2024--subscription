@@ -54,6 +54,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
+//import { Collapse } from 'bootstrap';
 import btnPrimary from '@/components/common/btnPrimary.vue';
 
 const btnLogonText = ref('登入 / 註冊')

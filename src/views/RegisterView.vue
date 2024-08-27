@@ -5,7 +5,7 @@
                 <div class="col-lg-6 mx-auto">
                     <div class="card register-card p-6 p-lg-11">
                         <div class="header mb-6 mb-lg-11">
-                            <h2 class="fs-4 text-sb-accent-200">註冊</h2>
+                            <h2 class="fs-4 text-sb-accent-200 fw-bolder">註冊</h2>
                         </div>
                         <div class="body mb-6 mb-lg-11">
                             <form>

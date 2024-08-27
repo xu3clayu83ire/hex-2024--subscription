@@ -6,6 +6,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'aos/dist/aos.css'; 
 import '@/assets/styles/all.scss';
 
+import 'bootstrap';
 import AOS from 'aos';
 AOS.init();
 
