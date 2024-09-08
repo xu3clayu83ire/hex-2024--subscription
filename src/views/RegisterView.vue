@@ -34,14 +34,14 @@
                                 <hr>
                             </div>
                             <div class="mb-6 mb-lg-11">
-                                <div class="btnthirdparty w-100 py-3 mb-2 text-center">
+                                <button class="btnthirdparty w-100 py-3 mb-2 text-center">
                                     <img src="../assets/images/icons-google.png" class="d-inline-block me-3" alt="">
                                     <span>使用 Google 註冊</span>
-                                </div>
-                                <div class="btnthirdparty w-100 py-3 text-center">
+                                </button>
+                                <button class="btnthirdparty w-100 py-3 text-center">
                                     <img src="../assets/images/icons-facebook.png" class="d-inline-block me-3" alt="">
                                     <span>使用 Facebook 註冊</span>
-                                </div>
+                                </button>
                             </div>
                             <div class="fw-semibold lh-base text-center">
                                 <span class="">已經是會員了？ </span>

@@ -22,7 +22,8 @@
                                 <img :src="data.imageSm" class="d-lg-none" :alt="data.title">
                             </div>
                             <ul>
-                                <li v-for=" (item, idx) in data.contentList" :key="idx">{{ item }}</li>
+                                <li v-for=" (item, idx) in data.contentList" :key="idx"><a role="button"
+                                        class="sb-link-primary">{{ item }}</a></li>
                             </ul>
                         </div>
                         <div class="card-footer text-center">

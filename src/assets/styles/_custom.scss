@@ -27,3 +27,7 @@
     }
   }
 }
+
+.sb-link-primary:hover{
+  color: RGBA(86, 149, 115, var(--bs-link-opacity, 1)) !important;
+}

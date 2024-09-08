@@ -28,7 +28,9 @@
                                     <img :src="data.imageSm" class="d-lg-none mx-auto" :alt="data.text">
                                 </div>
                                 <div class="article-card-body mb-6">
-                                    <h3 class="fw-bolder fs-5 mb-2">{{ data.text }}</h3>
+                                    <h3 class="fw-bolder fs-5 mb-2">
+                                        <a role="button" class="sb-link-primary">{{ data.text }}</a>
+                                    </h3>
                                     <p class="fs-6 fw-semibold lh-base text-sb-gray-400">
                                         {{ data.content }}
                                     </p>
@@ -68,6 +70,11 @@
     &-card-header>img {
         width: 100%;
         height: 192px;
+    }
+
+    &-card-header>img:hover {
+        filter: opacity(0.7);
+        cursor: pointer;
     }
 
     &-card-body>p {

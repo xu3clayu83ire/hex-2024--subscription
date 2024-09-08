@@ -19,7 +19,7 @@
                             <linkImg :imgPath="datas[1].imagePath" :text="datas[1].title"
                                 :badgeText="datas[1].badgeText"></linkImg>
                         </div>
-                        <div class="col-6 ">
+                        <div class="project-img-wrap col-6">
                             <linkImg :imgPath="datas[2].imagePath" :text="datas[2].title"
                                 :badgeText="datas[2].badgeText" class="mb-lg-11"></linkImg>
                             <linkImg :imgPath="datas[3].imagePath" :text="datas[3].title"

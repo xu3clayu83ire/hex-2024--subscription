@@ -19,8 +19,10 @@
                         <div class="card-footer">
                             <div class="">
                                 <div class="mb-4">
-                                    <span v-for=" (item, idx) in data.tags" :key="idx"
-                                        class="badge sb-badge-primary my-2">{{ item }}</span>
+                                    <a role="button">
+                                        <span v-for=" (item, idx) in data.tags" :key="idx"
+                                            class="badge sb-badge-primary my-2">{{ item }}</span>
+                                    </a>
                                 </div>
                                 <div class="link text-center py-2">
                                     <linkPrimary :text="linkText" class="me-3"></linkPrimary>

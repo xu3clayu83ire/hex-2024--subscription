@@ -26,31 +26,47 @@ const badgeText = props.badgeText;
 
 </script>
 
-<style scoped>
-.link-img-wrap {
-    position: relative;
-}
+<style scoped lang="scss">
+.link-img {
+    &-wrap {
+        position: relative;
+    }
 
-.link-img-wrap img {
-    max-width: 306px;
-    width: 100%;
-    height: 236px;
-    border-radius: 4px;
-    object-fit: cover;
-}
+    &-wrap img {
+        max-width: 306px;
+        width: 100%;
+        height: 236px;
+        border-radius: 4px;
+        object-fit: cover;
+    }
 
-.link-img-wrap .link-img-text {
-    position: absolute;
-    color: #fff;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 12px 12px 16px 12px;
-}
+    &-wrap:hover::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #212529;
+        opacity: 0.4;
+        border-radius: 4px;
+    }
 
-.link-img-wrap .link-img-badge {
-    position: absolute;
-    top: -16px;
-    left: 16px;
+    &-text {
+        z-index: 99;
+        position: absolute;
+        color: #fff;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 12px 12px 16px 12px;
+    }
+
+    &-badge {
+        z-index: 99;
+        position: absolute;
+        top: -16px;
+        left: 16px;
+    }
 }
-</style>

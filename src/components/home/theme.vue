@@ -9,7 +9,7 @@
                             <img :src="data.imageLg" class="d-none d-lg-block img-fluid" alt="">
                             <img :src="data.imageSm" class="d-lg-none img-fluid mx-auto" alt="">
                         </div>
-                        <div class="theme-item-text">
+                        <div class="theme-item-overlay">
                             <p class="text-white">{{ data.text }}</p>
                         </div>
                     </a>
@@ -33,18 +33,35 @@
         border-radius: 20px 0px;
     }
 
-    &-item-text {
+    &-item-overlay {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover::after,
+        &:focus::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #212529;
+            opacity: 0.4;
+            border-radius: 20px 0px;
+        }
     }
 
-    &-item-text>p {
+    &-item-overlay>p {
+        z-index: 99;
+
         @include pc {
             font-size: 20px;
         }

@@ -46,9 +46,10 @@
                             <div class="card-footer p-6">
                                 <div class="align-items-center d-flex justify-content-between">
                                     <div class="my-2">
-                                        <span class="badge sb-badge-primary me-4">#夜貓行程</span>
-                                        <span class="badge sb-badge-primary me-4">#barhopping</span>
-                                        <span class="badge sb-badge-primary">#全台酒吧</span>
+                                        <a role="button"><span class="badge sb-badge-primary me-4">#夜貓行程</span></a>
+                                        <a role="button"><span
+                                                class="badge sb-badge-primary me-4">#barhopping</span></a>
+                                        <a role="button"><span class="badge sb-badge-primary">#全台酒吧</span></a>
                                     </div>
                                     <div class="link">
                                         <linkPrimary :text="linkText" class="me-3"></linkPrimary>
