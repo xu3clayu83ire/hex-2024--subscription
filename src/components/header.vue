@@ -19,7 +19,7 @@
                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
                 </svg>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            <div class="offcanvas offcanvas-end my-lg-10" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas"
@@ -36,7 +36,7 @@
                             </svg>
                         </form>
                     </div>
-                    <ul class="navbar-nav align-items-lg-center">
+                    <ul class="navbar-nav align-items-lg-center ms-lg-auto">
                         <li class="nav-item mb-6 mb-lg-0 me-lg-5">
                             <a class="nav-link p-3 py-lg-2 px-lg-5" href="#">所有文章</a>
                         </li>

@@ -70,3 +70,4 @@ const badgeText = props.badgeText;
         left: 16px;
     }
 }
+</style>
